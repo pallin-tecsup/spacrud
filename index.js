@@ -31,7 +31,7 @@ app.post("/validar", function (req, res) {
     const { dni, nombres, correo, password } = req.body;
 
     const sql = `
-        INSERT INTO info (dni, nombres, correo, password)
+        INSERT INTO infos (dni, nombres, correo, password)
         VALUES (?, ?, ?, ?)
     `;
 
