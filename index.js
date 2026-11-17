@@ -14,10 +14,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 const conexion = mysql.createConnection({
-    host: "localhost",
-    database: "js",
-    user: "root",
-    password: ""
+    host: process.env.MYSQLHOST,
+    port: process.env.MYSQLPORT,
+    database: process.env.MYSQLDATABASE,
+    user: process.env.MYSQLUSER,
+    password: process.env.MYSQLPASSWORD
 });
 
 // MOSTRAR TU PÁGINA PRINCIPAL
